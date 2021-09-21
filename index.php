@@ -14,14 +14,23 @@ $paragraph ="Lorem Ipsum is simply dummy text of the printing and typesetting in
 ?>
 
     <p>
-    <?php echo $paragraph; ?>
+    <?php echo $paragraph; 
+    $badword = $_GET["badword"];
+    ?>
     </p>
 
-    <p class="bold">
+    <p class="bold center"> Length: 
     <?php echo strlen($paragraph); ?>
     </p>
 
-    
+    <p>
+    <?php echo str_replace($badword, "***", $paragraph);?>
+    </p>
+
+    <p class="bold center"> Length: 
+    <?php echo strlen($paragraph); ?>
+    </p>
+
     
 </body>
 </html>
